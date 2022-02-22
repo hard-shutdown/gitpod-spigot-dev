@@ -1,0 +1,15 @@
+#Server Stuff
+server/eula.txt
+server/world*
+server/versions
+server/cache
+server/libraries
+server/logs
+server/plugins
+server/*.json
+server/*.yml
+server/*.properties
+server/.console_history
+
+#Plugin Files
+plugin/demoplugin/target/*
