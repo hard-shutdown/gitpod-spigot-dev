@@ -10,5 +10,5 @@ RUN sudo su -c "wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apach
 RUN sudo su -c "echo -en 'export M2_HOME=/opt/maven\nexport MAVEN_HOME=/opt/maven\nexport PATH=${M2_HOME}/bin:${PATH}' >> /etc/profile.d/maven.sh"
 RUN sudo chmod +x /etc/profile.d/maven.sh
 
-RUN cd /home/gitpod && echo "export M2_HOME=/opt/maven\nexport MAVEN_HOME=/opt/maven\nexport PATH=${M2_HOME}/bin:${PATH}" >> .bashrc
-RUN cd /home/gitpod && echo "alias mvn='JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64 mvn'" >> .bashrc
+RUN cd /home/gitpod && echo -en "export M2_HOME=/opt/maven\nexport MAVEN_HOME=/opt/maven\nexport PATH=${M2_HOME}/bin:${PATH}" >> .bashrc
+RUN cd /home/gitpod && echo "alias mvn='JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64 /opt/maven/bin/mvn'" >> .bashrc
