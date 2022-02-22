@@ -5,6 +5,7 @@ RUN sudo curl -LO https://corretto.aws/downloads/latest/amazon-corretto-17-x64-l
 RUN sudo dpkg --install amazon-corretto-17-x64-linux-jdk.deb
 
 # Install Maven
+RUN sudo apt install wget ca-certificates
 RUN sudo su -c "wget https://www-us.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp && tar xf /tmp/apache-maven-*.tar.gz -C /opt && ln -s /opt/apache-maven-3.6.3 /opt/maven"
 RUN sudo echo "export M2_HOME=/opt/maven\n" >> /etc/profile.d/maven.sh
 RUN sudo echo "export MAVEN_HOME=/opt/maven\n" >> /etc/profile.d/maven.sh
