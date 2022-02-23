@@ -2,4 +2,4 @@
 server
 
 #Plugin Files
-plugin/demoplugin/target/*
+plugin/demoplugin/target
