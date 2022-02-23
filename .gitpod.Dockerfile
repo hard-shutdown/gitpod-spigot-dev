@@ -1,8 +1,4 @@
-FROM gitpod/workspace-full-vnc
-
-RUN sudo apt-get update && \
-    sudo apt-get install -y libx11-dev libxkbfile-dev libsecret-1-dev libnss3 && \
-    sudo rm -rf /var/lib/apt/lists/*
+FROM gitpod/workspace-base
 
 RUN sudo apt-get update && sudo apt-get install java-common
 RUN sudo curl -LO https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb
