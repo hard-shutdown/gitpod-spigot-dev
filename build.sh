@@ -1,2 +1,2 @@
 cd plugin
-mvn clean package
+/opt/maven/bin/mvn clean package
